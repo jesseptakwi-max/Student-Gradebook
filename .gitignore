@@ -1,0 +1,7 @@
+build/
+cmake-build-*/
+gradebook.dat
+test_gradebook.dat
+.DS_Store
+*.o
+*.dSYM/
