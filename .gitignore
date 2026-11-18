@@ -1,7 +1,22 @@
+
+# CMake build files
 build/
 cmake-build-*/
+
+# Grade-book data
 gradebook.dat
 test_gradebook.dat
+
+# macOS files
 .DS_Store
-*.o
 *.dSYM/
+
+# Compiled files
+*.o
+
+# Local editor settings
+.vscode/
+
+# Temporary code review files
+student-gradebook-review/
+student-gradebook-review.zip
