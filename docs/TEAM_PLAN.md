@@ -1,99 +1,147 @@
-# Team plan and division of responsibilities
+# Team Plan and Division of Responsibilities
 
-## Confirmed team and equipment
+## 1. Confirmed Team and Equipment
 
-| Member | Role | Computer / environment |
+| Member | Role | Computer / Environment |
 |---|---|---|
 | **Jesse** | C++ Developer 1 | MacBook running macOS |
 | **Jonathan** | C++ Developer 2 | Windows laptop |
-| **Tavana** | Documentation, requirements and QA coordinator | No dedicated project laptop; can work on documentation, planning and reviews using available access/shared sessions |
+| **Tavana** | Documentation, Requirements and QA Coordinator | No dedicated project laptop; contributes through available access and shared sessions |
 
-There are two laptops, so Jesse and Jonathan are the two developers who implement and run the C++ project. Tavana has a substantial, defined contribution that does not require independently compiling the project.
+Jesse and Jonathan are responsible for implementing and running the C++ application on their respective computers. Tavana contributes to documentation, requirements, planning, manual testing and quality assurance.
 
-## Jesse — Developer 1 (macOS)
+Tavana does not currently have a GitHub account. GitHub activities requiring an account must therefore be handled by Jesse or Jonathan, while Tavana's actual contributions should still be recorded.
 
-**Main ownership:** student and course management, menu integration and macOS verification.
+## 2. Jesse — Developer 1 (macOS)
 
-- Implement and maintain `Student` and `Course` classes.
+**Main ownership:** Student and course management, menu integration, project coordination and macOS verification.
+
+Responsibilities:
+
+- Implement and maintain the `Student` and `Course` classes.
 - Implement student operations: add, list, search, rename and remove.
 - Implement course operations: add and list courses.
-- Coordinate changes to `src/main.cpp` and the interactive menu with Jonathan so both developers do not edit the same area independently.
-- Write and run tests for student and course behaviour.
-- Build and run the full project on macOS using Clang and CMake.
-- Commit work in small increments on `feature/jesse-student-course` and open Pull Requests.
-- Record macOS build/test commands and actual outcomes for the final report.
+- Coordinate changes to `src/main.cpp` and the interactive menu with Jonathan.
+- Write and run tests for student and course functionality.
+- Build and run the complete project on macOS using Clang and CMake.
+- Maintain the `feature/jesse-student-course` branch.
+- Commit changes in small, meaningful increments.
+- Open Pull Requests into `integration/student-gradebook` when work is ready for review.
+- Record actual macOS build and test results for the final report.
 
-## Jonathan — Developer 2 (Windows)
+## 3. Jonathan — Developer 2 (Windows)
 
-**Main ownership:** enrolment, assessments, grading, persistence and Windows verification.
+**Main ownership:** Enrolment, assessments, grading, persistence and Windows verification.
+
+Responsibilities:
 
 - Implement and maintain `Assessment`, `GradeScale` and `GradeBook` functionality.
-- Implement enrolment, score entry, result calculation and course reports.
-- Maintain saving and loading of the grade-book data file.
-- Maintain and explain the reusable `Repository<T>` class template and its use of STL.
+- Implement student enrolment, assessment entry and result calculation.
+- Implement course result reports.
+- Maintain saving and loading of grade-book data.
+- Maintain and explain the reusable `Repository<T>` class template and its use of the STL.
 - Write and run tests for enrolment, assessments, grading, results and persistence.
-- Build and run the full project on Windows using MSVC, CMake and CTest.
+- Build and run the complete project on Windows using MSVC, CMake and CTest.
 - Coordinate changes to `src/main.cpp` with Jesse.
-- Commit work in small increments on `feature/jonathan-grading-assessments` and open Pull Requests.
-- Record Windows build/test commands and actual outcomes for the final report.
+- Use a feature branch for development, such as `feature/jonathan-grading-assessments`.
+- Commit changes in small, meaningful increments.
+- Open Pull Requests into `integration/student-gradebook` when work is ready for review.
+- Record actual Windows build and test results for the final report.
 
-## Tavana — Documentation, requirements and QA coordinator
+## 4. Tavana — Documentation, Requirements and QA Coordinator
 
-**Main ownership:** non-code project deliverables, task board, manual test planning and contribution evidence.
+**Main ownership:** Non-code deliverables, task planning, manual testing and contribution evidence.
 
-- Convert the lecturer's PPOIS task requirements into a checklist and track evidence for each requirement.
-- Create and maintain the GitHub Projects task board with **Planned**, **In Progress**, **Under Review** and **Completed** columns.
-- Maintain project documentation in Markdown, including the user guide and architecture explanation; coordinate updates to the README.
+Responsibilities:
+
+- Convert the lecturer's PPOIS requirements into a checklist.
+- Help track evidence for each project requirement.
+- Help maintain the GitHub Projects task board through coordination with Jesse or Jonathan.
+- Prepare and maintain Markdown documentation, including the user guide and architecture explanation.
+- Coordinate README updates.
 - Prepare manual test scenarios and expected outcomes using `docs/TEST_PLAN.md`.
-- Review Pull Requests: check that the change matches its task, documentation is updated where needed, and developers have supplied build/test evidence. Record actual review comments; do not claim reviews that did not happen.
-- Maintain a contribution log with dates, task links, decisions and evidence.
+- Review project changes and provide feedback through the available communication channels.
+- Check that changes match their assigned tasks and that appropriate documentation and test evidence are provided.
+- Maintain a contribution log with dates, tasks, decisions and evidence.
 - Coordinate the final report and presentation/demo script.
-- Help check that the final report accurately describes the work and actual test results.
+- Help ensure the final report accurately describes completed work and actual test results.
 
-## Shared responsibilities
+Since Tavana does not currently have a GitHub account, Jesse or Jonathan must publish any documentation or QA changes that Tavana prepares. Contributions should be attributed accurately.
 
-- All three members agree on project scope, user needs and the default A–F grading scale.
-- All three participate in planning and contribute content to the final report.
-- Jesse demonstrates the macOS build; Jonathan demonstrates the Windows build; Tavana coordinates the user-workflow review and documentation.
+## 5. Shared Responsibilities
+
+- Agree on project scope, user requirements and the default A–F grading scale.
+- Participate in planning and contribute to the final report.
+- Jesse demonstrates the macOS build.
+- Jonathan demonstrates the Windows build.
+- Tavana coordinates the user-workflow review and documentation.
 - All members should understand the project's purpose and be able to explain their own contributions.
-- Individual contributions must be truthful and visible through commits, Pull Requests, task-board items, review comments, test records or documentation.
+- Individual contributions must be supported by available evidence, such as commits, Pull Requests, task-board items, review comments, test records or documentation.
 
-## Suggested branches
+## 6. Git Branching and Collaboration Workflow
 
-- Jesse: `feature/jesse-student-course`
-- Jonathan: `feature/jonathan-grading-assessments`
-- Tavana: `docs/tavana-documentation-qa`
+The project currently uses the following branch structure:
 
-Use Pull Requests into `main`. Avoid committing directly to `main` for normal development. Tavana's branch is for documentation and QA artefacts, not C++ implementation.
+| Branch | Purpose |
+|---|---|
+| `feature/jesse-student-course` | Jesse's student and course management development |
+| `feature/jonathan-grading-assessments` | Planned feature branch for Jonathan's development |
+| `integration/student-gradebook` | Integration branch for combining and reviewing development work |
 
-## GitHub task board seed
+The confirmed remote branches currently include Jesse's feature branch and the integration branch. Jonathan's feature branch should be created or verified when his development work is ready.
 
-Create a GitHub Projects board for this repository with these columns: **Planned**, **In Progress**, **Under Review**, **Completed**. Add the following tasks and assign the named owner:
+### Workflow
 
-| Task | Owner | Suggested initial status |
-|---|---|---|
-| Confirm project requirements and acceptance checklist | Tavana | Planned |
-| Set up CMake build and shared C++17 conventions | Jesse + Jonathan | Planned |
-| Implement student management and tests | Jesse | Planned |
-| Implement course management and tests | Jesse | Planned |
-| Implement enrolment and assessment entry | Jonathan | Planned |
-| Implement grade scale and result calculations | Jonathan | Planned |
-| Implement save/load and persistence tests | Jonathan | Planned |
-| Integrate menu and validate full user workflow | Jesse + Jonathan | Planned |
-| Build and test on macOS | Jesse | Planned |
-| Build and test on Windows | Jonathan | Planned |
-| Prepare manual test cases and review evidence | Tavana | Planned |
-| Maintain README and architecture/user documentation | Tavana | Planned |
-| Review Pull Requests and maintain contribution log | Tavana + other reviewer | Planned |
-| Prepare final report and presentation | Tavana, with input from all | Planned |
+1. Developers work on their own feature branches.
+2. Changes are committed in small, meaningful increments.
+3. Completed feature work is submitted through Pull Requests.
+4. Pull Requests are reviewed before merging into `integration/student-gradebook`.
+5. The integrated project is built and tested.
+6. Once the project is ready for final release, the team can prepare the final integration into the repository's designated release branch.
 
-Move cards only when work actually changes status. This table is a starting plan; the GitHub board should reflect real progress.
+Avoid committing directly to the integration branch for normal feature development.
 
-## Milestones
+Tavana's documentation and QA contributions can be prepared separately and committed by a team member with GitHub access.
 
-1. Create the GitHub board, agree interfaces and confirm both computers can configure the starter project.
-2. Complete student/course management and the menu foundation.
-3. Complete enrolment, assessments, grading and persistence.
-4. Complete independent unit tests and manual workflow testing.
-5. Verify clean builds on macOS and Windows.
-6. Finish documentation, contribution evidence, final report and presentation.
+## 7. GitHub Task Board
+
+The GitHub Projects task board should track the following work:
+
+| Task | Responsible Member(s) |
+|---|---|
+| Confirm project requirements and acceptance checklist | Tavana, with team input |
+| Establish CMake build and C++17 conventions | Jesse and Jonathan |
+| Implement student management and tests | Jesse |
+| Implement course management and tests | Jesse |
+| Implement enrolment and assessment entry | Jonathan |
+| Implement grading scale and result calculations | Jonathan |
+| Implement saving, loading and persistence tests | Jonathan |
+| Integrate the menu and validate the complete user workflow | Jesse and Jonathan |
+| Build and test on macOS | Jesse |
+| Build and test on Windows | Jonathan |
+| Prepare manual test cases and review evidence | Tavana |
+| Maintain README and architecture/user documentation | Tavana, coordinated through Jesse or Jonathan |
+| Review Pull Requests and maintain contribution evidence | Jesse and Jonathan, with Tavana providing review feedback |
+| Prepare the final report and presentation | Tavana, with input from all members |
+
+Suggested board columns:
+
+- Planned
+- In Progress
+- Under Review
+- Completed
+
+Task statuses must reflect actual progress rather than the original plan. Only mark work as completed when there is supporting evidence.
+
+## 8. Project Milestones
+
+1. Confirm project requirements, team responsibilities and the initial project structure.
+2. Establish the CMake build system and agree on class interfaces.
+3. Complete student and course management.
+4. Complete enrolment, assessments, grading and persistence.
+5. Integrate the application menu and validate the complete workflow.
+6. Complete automated unit tests and manual testing.
+7. Verify clean builds on macOS and Windows.
+8. Complete documentation, contribution evidence, final report and presentation.
+
+## 9. Contribution
