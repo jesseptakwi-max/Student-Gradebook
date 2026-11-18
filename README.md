@@ -289,6 +289,7 @@ Actual contributions, reviews, testing, and documentation work should be recorde
 The project should be built and tested independently on macOS and Windows.
 
 The current development build and automated unit tests have been successfully executed on macOS.
+Repository: <https://github.com/jesseptakwi-max/Student-Gradebook.git>
 
 Windows verification must be recorded separately after the application has been built and tested on a Windows environment.
 
