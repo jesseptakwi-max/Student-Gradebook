@@ -141,7 +141,7 @@ StudentGradeBook/
 
 ## GitHub repository and collaboration
 
-Repository: <https://github.com/jesseptakwi-max/TEAMWORK>
+Repository: <https://github.com/jesseptakwi-max/Student-Gradebook.git>
 
 The team must use the repository's actual history to show iterative work:
 
